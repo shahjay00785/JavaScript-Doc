@@ -1,0 +1,362 @@
+﻿
+/* Author Jay Shah */
+Don't Imitate UnderStand
+
+example are very important
+
+Deep Under Standing of Programming
+
+   1) chorme 
+   2) text editer
+      bracket.io   
+
+
+  IT's just Vocabulary
+
+  UnderStanding FrameWorks The And Werid Parts
+
+
+  JavaScript FrameWork
+  Jquery , Angular Js
+  They are just javascript but 
+  first you learn firt basic java first
+
+  
+  
+  /*
+	Conceptual Aside
+ */
+
+   
+  
+  1) Syntax Parser
+  2) Excution Contexts
+  3) Lexical Environments
+  
+  
+   1) Syntax Parser
+
+    A program that reads your code and
+    deterrmine what it does and if its
+    grammar Is valid
+
+    Your code -> complier -> computer Instruction
+
+  2) Excution Contexts
+
+	
+    Runnig code
+
+  3) Lexical Contexts 
+l
+     Where something sits physically in
+     the code you write	  
+     
+--------------------------------------------------------------------------------    
+  Name / Value Paris And Objects
+
+
+   Name which map to a unique value
+
+
+   address ='100 main st.'
+
+   name      value pair
+
+   Objects
+
+   A collection of name value pairs
+  
+   ex.
+
+   Name
+     Name
+       Name/value
+       Name/value
+  
+
+  Adress:{
+	Street : 'Main',
+	Number : 100
+	Apartment: 
+        {
+		Floor: 3,
+		Number: 301
+        }
+  }
+
+
+
+ o --------------------------------------------------------------------------
+
+  The Global Envirnomen And Global Object
+  
+   Excution Context(Global)
+
+   Global Object   this
+    
+   When your code is run 
+   js enegine  give you global object and this
+   
+   Write in Console	
+   
+   var a='hello world'
+   function b(){
+    }   
+   window.a
+   a
+   
+  Exceution Context
+
+
+    Global Object
+   'this'
+    Outer Envrionment
+
+
+--------------------------------------------------------------------------------
+
+
+  The exceution Context
+  
+ crating and Hoisting
+
+ /**********
+
+
+   b();
+   console.log(a);
+
+   
+   var a= 'hello world';
+
+  function b() {
+   console.log('called b!');
+   }
+
+    Global | This Outer | Environment
+
+   Setup Memory Space for
+   Varible and Fucntions 
+   "Hoisting"
+
+
+   var a= 'hello world';
+-
+  function b() {
+   console.log('called b!');
+   }
+
+    b();
+   console.log(a);
+ 
+
+************************/
+    
+Java Script And Undfined 
+
+  In Js first Exceution Context
+  Has 
+  
+  1) Global Object
+  2) this
+  3) Outer Environment
+
+   "hoisting"
+
+    Varible Setup 
+  (and set euqal to 'unfined')
+   and Function Setup
+ 
+  Code
+ 
+ //var a; a in memory
+// a is not in the memory
+  var a="1";
+  a=undefined; //
+
+/*
+  
+   undefined  is special value
+
+	which is used for
+
+  easy to debugging
+  i never set this value;
+
+ */
+
+ console.log(a);
+
+ if (a  === undefined ) {
+   console.log('  a is undefined ');
+ }
+else {
+    console.log(' a is defined ')
+}
+ 
+   ************************************************************************************
+
+Excution code line by line
+
+	function b(){
+  	console.log("called b");   //creataion
+	}
+	b();
+	console.log(a); // undefined
+
+	var a="hello world";//set value a
+	console.log(a);  // hello world
+/*
+
+how does js script works in
+the exceution and creataion phase */
+
+************************************
+***********************************************
+***************************************
+
+
+  Single Theaded Syncronous Excution
+
+
+    Single Theaded
+
+    One At a Time
+    Js in the run only in browser
+  
+    Syncronous 
+
+    And in Order
+
+    Only one thing run at the time
+
+    js is Single Theaded Syncronous Excution 
+    in the  behaviour
+
+*****************************************************************
+********************************************************
+***************************************************
+
+  Function Invocation And The Execution Stack
+  
+  Invocation : Runnig a Fucntion
+	       Hey Run the function
+
+
+  function b() {
+
+	}
+   function a() {
+ 	 b();
+ }
+
+  a();
+
+
+  what is the first created eXCUTION sTACK
+
+  1. Global Excecution Context 
+     This and window
+      
+      Created and code is excuted
+
+  2. a()
+	Excution Context ( Create and excute )
+  
+  3. b()
+	Excution Context (create and excute )
+     
+*****************************************************************
+********************************************************
+***************************************************
+
+ 	Functions , Context And Varible Environments
+
+
+	Varible Environments : where is the varible
+	
+	
+	function b (){
+	   var myVar;
+           
+         // 3. Excution Context  create and excute 
+	        undefined
+        }
+	function a (){   
+         
+         // 2. Excution Context myVar=2
+         
+          var myVar = 2;
+	   b();      
+        
+        }
+	 
+   	var myVar = 1;  // 1. 
+ 			   global exceutionn Context 
+			   Created and code is executed
+			   myVar=1
+	a();
+  
+    /*/*/*/*/*/*/*/*
+
+    Code
+
+
+  function b() {  
+ 	// 3
+ 	 var myVar;
+ 	 console.log(myVar);
+	}
+	function a() { 
+    // 2
+   	 var myVar = 2;
+  	console.log(myVar);
+ 	 b();
+	}
+	var myVar = 1;  // 1 because it is global
+	//console.log(myVar);
+/	/a();    // 2
+
+ 	console.log(myVar);
+ 	a();
+ 	console.log(myVar);
+
+
+    			
+
+
+
+*****************************************************************
+********************************************************
+***************************************************
+     
+  Scope Chain
+
+   Excution context has this (reference) 
+   and it has outer envrionment reference
+
+  /* scope of the chain */
+
+	function b(){
+  		console.log(myVar); // 1
+	}
+	function a() {
+ 	 	var myVar=2;  // 2
+  		b();
+	}
+	var myVar=1;
+	a();        // 1
+
+
+  Scope chain where can i run varible
+  
+  refernce to outer envrionment
+
+  
+
+*****************************************************************
+********************************************************
+***************************************************
+
+  how to change laxycal envrioment of varible
