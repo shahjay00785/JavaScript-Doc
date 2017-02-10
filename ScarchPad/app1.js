@@ -1,9 +1,10 @@
 /* scope of the chain */
 
-function b(){
-  console.log(myVar); // 1
-}
 function a() {
+ function b() {
+   console.log(myVar);
+ }
+
   var myVar=2;  // 2
   b();
 }

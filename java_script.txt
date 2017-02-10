@@ -359,4 +359,9 @@ the exceution and creataion phase */
 ********************************************************
 ***************************************************
 
-  how to change laxycal envrioment of varible
+	how to change laxical envrioment of varible
+ 
+	function b is laxically sitting in the fucntion a
+
+        Reference To outer Lexical Environment
+
