@@ -365,3 +365,194 @@ the exceution and creataion phase */
 
         Reference To outer Lexical Environment
 
+
+	function a() {
+		fucntion b() {
+			console.log(myVar);
+	}
+		b();
+	}
+
+	var myVar = 1;
+	a();
+
+       // answer is 1
+          because b() has no myVAr so
+	  it refered to outer Envirionmet
+
+
+	
+	function a() {
+		fucntion b() {
+			console.log(myVar);
+	}
+	       myVAr=2;
+
+		b();
+	}
+
+	var myVar = 1;
+	a();
+
+         here answer is 2 because
+         myVar is lexically(phyiscally) sit in the
+	 function b();
+
+	
+*****************************************************************
+********************************************************
+***************************************************
+ 	Scope , ES6 AND let
+
+
+         Scope  : where a varibel is avaialble in 
+		  your code
+	
+                  if it's is truly the same
+		  varible,or a new copy
+
+
+         Ecama Scipt NExt Level of Js
+
+              if ( a > b ) {
+		 let c = true;
+          }
+
+
+*****************************************************************
+********************************************************
+***************************************************
+    What about asynchronous Call backs?
+ 
+  
+    Asynchonous : More Than one At a Time
+
+    The browser
+            
+	Rendering Engine
+	        |
+	The javascript Engine
+		|
+	http rEQUEST
+           
+
+     Excution Stack
+     
+     b();  Excution Context ( create and execute)
+     a();  Excution Context  ( create and execute)
+     Global Excution Context (Created and code is executed )
+
+     When Excution Stack is empty 
+     jse look at the event queue
+
+     Event Queue
+
+      Click Handler() 2       
+      Click 1 
+      HTTp Request 3
+
+  
+
+*****************************************************************
+********************************************************
+***************************************************
+	
+   Java script and Types
+
+   Js has a dynamic typing
+   
+   static typing 
+  
+   bool isNew = ' Hello '; // an erroor
+
+   Dynamic Typing
+
+   var isNew = true; // no error
+   isNew = 'yup';
+   isNew = 1;
+    
+   Primitive Types : A type of data that	
+		     Represents A single value
+			
+                     That is, not an object
+
+  1)  UNDEFINED
+		
+       undefined represents lack of expreience
+       (you should't set a varible to this '
+
+  2) Null
+     
+     Null is represent lack of existance
+     (you can set a varible to this)
+
+
+  3) Boolean 
+       true or false
+
+  4) Number 
+      floating point number ( there always some 
+	decimal). Unlike Other programming language
+        there's only one 'number' type .. 
+	and it can make math weird
+
+  5) String
+	a sequence of charcters 
+      ( both '' and "" can be used )
+
+  6) Symbol
+    
+   Used in ES6 ( the next version  of js )
+
+*****************************************************************
+********************************************************
+***************************************************
+   
+   Operators
+   
+   A speciall function that is
+   syntactilly  ( written differnetly 
+
+  Generally Opeator Take two parameter and 
+  return One result
+   
+
+   var a = 3 + 4;
+   console.log(a)
+
+   +3 4; // predfix notaion
+    3 4 + // postfix notation
+   3 + 4  // infix notation
+
+     
+
+  oprator are just a functuion
+
+  +,-,>,<,>=,<=
+
+ 	
+ var a = 3 - 4;
+   console.log(a);   // -1
+
+
+  var a = 3  >4;
+   console.log(a)  // falase
+
+
+ *****************************************************************
+********************************************************
+***************************************************
+
+
+   Operator Precedence and Associativity
+
+
+
+
+
+
+
+                 
+ 
+ 
+
